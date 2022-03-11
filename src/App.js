@@ -1,16 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Aqui va a estar mi futuro e-commerce...<br />
-          Para <b>Coderhouse</b>!
-        </p>
-      </header>
+      <NavBar />
     </div>
   );
 }
