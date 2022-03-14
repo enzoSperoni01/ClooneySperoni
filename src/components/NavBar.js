@@ -1,5 +1,5 @@
 import Button from '@mui/material/Button';
-import '../App.css';
+import '../scss/App.scss';
 
 const NavBar = () => {
     return (
