@@ -1,5 +1,6 @@
 import Button from '@mui/material/Button';
-import '../scss/App.scss';
+import CartWidget from '../CartWidget/CartWidget';
+import '../../scss/App.scss';
 
 const NavBar = () => {
     return (
@@ -13,6 +14,8 @@ const NavBar = () => {
                     <li><Button>Contacto</Button></li>
                 </ul>
             </nav>
+
+            <CartWidget />
         </div>
     );
 }
