@@ -5,7 +5,7 @@ import '../../scss/App.scss';
 const NavBar = () => {
     return (
         <div className='navbar'>
-            <h2>Brand</h2>
+            <h2>Clooney</h2>
 
             <nav>
                 <ul>
