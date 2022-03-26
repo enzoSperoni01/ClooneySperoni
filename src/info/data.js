@@ -1,22 +1,22 @@
-const movies = [
+const movieList = [
     {
         id: 1,
-        title: 'The Batman',
+        label: 'The Batman',
         price: 50,
         stock: 4
     },
     {
         id: 2,
-        title: 'Joker',
+        label: 'Joker',
         price: 40,
         stock: 8
     },
     {
         id: 3,
-        title: 'The Dark Knight',
+        label: 'The Dark Knight',
         price: 75,
         stock: 11
     }
 ];
 
-export default movies;
+export default movieList;
