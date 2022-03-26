@@ -1,11 +1,16 @@
 import React from 'react';
 
-const MovieItem = ({ label, price, id, stock}) => {
+const MovieItem = ({ label, price, id, stock, img }) => {
     return(
         <div key={id} className='movie-card'>
-            <h2>{label}</h2>
-            <h3>${price}</h3>
-            <p>Stock: {stock}</p>
+            <img src={`../../assets/img/${img}.jpg`} alt={`Poster ${label}`}></img>
+
+            <div>
+                <h2>{label}</h2>
+                <h3>${price}</h3>
+                <p>Stock: {stock}</p>   
+            </div>
+
         </div>
     )
 }

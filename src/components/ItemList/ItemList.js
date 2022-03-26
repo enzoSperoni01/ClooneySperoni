@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import movieList from '../../info/data';   
 import MovieCard from '../MovieCard/MovieCard';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const ItemList = () => {
     const [ films, setFilms ] = useState([]);
@@ -25,27 +26,27 @@ const ItemList = () => {
     }
 
     return(
-        <div>
+        <div className="container-movies">
             {
                 films.length ? (
                     <>
                         {
                             films.map( film => {
-                                const { label, price, index, stock, id } = film;
+                                const { label, img, price, stock, id } = film;
                                 return(
                                     <MovieCard
                                         key={id}
                                         label={label}
                                         price={price}
-                                        index={index}
                                         stock={stock}
+                                        img={img}
                                     />
                                 )
                             })
                         }
                     </>
                 ) : (
-                    <p>Cargando peliculas...</p>
+                    <CircularProgress />
                 )
             }
         </div>
