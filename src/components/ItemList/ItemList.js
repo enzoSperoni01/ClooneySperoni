@@ -36,10 +36,10 @@ const ItemList = () => {
                                 return(
                                     <MovieCard
                                         key={id}
+                                        img={img}
                                         label={label}
                                         price={price}
                                         stock={stock}
-                                        img={img}
                                     />
                                 )
                             })
