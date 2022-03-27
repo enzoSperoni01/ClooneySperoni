@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import movieList from '../../info/data';   
-import MovieCard from '../MovieCard/MovieCard';
+import MovieCard from '../MovieCard/Item.js';
 import CircularProgress from '@mui/material/CircularProgress';
 
 const ItemList = () => {

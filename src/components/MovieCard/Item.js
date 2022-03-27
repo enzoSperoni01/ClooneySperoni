@@ -8,7 +8,7 @@ const MovieItem = ({ label, price, id, stock, img }) => {
             <div>
                 <h2>{label}</h2>
                 <h3>${price}</h3>
-                <p>Stock: {stock}</p>   
+                <p>Stock: {stock}</p>
             </div>
 
         </div>
