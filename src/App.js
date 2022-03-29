@@ -1,6 +1,7 @@
 import './scss/App.scss';
 import NavBar from './components/NavBar/NavBar';
 import ListMovies from './components/ItemListContainer/ListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <ListMovies>
         <p>Peliculas de Drama</p>
       </ListMovies>
+      <ItemDetailContainer />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import ItemList from "../ItemList/ItemList";
+import '../../scss/App.scss';
 
 const ListMovies = ({children}) => {
     return(
