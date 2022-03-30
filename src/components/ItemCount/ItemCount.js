@@ -13,16 +13,13 @@ const ItemCount = ({initial, stock}) => {
     };
 
     return(
-        <div className='Item-Compra'>
-            <h2>Item</h2>
+        <>
             <div className='operator'>
-                <Button variant="contained" onClick={decrement}>-</Button>
+                <Button variant="contained" className='btn-count' onClick={decrement}>-</Button>
                 <p>{count}</p>
-                <Button variant="contained" onClick={increment}>+</Button>
+                <Button variant="contained" className='btn-count' onClick={increment}>+</Button>
             </div>
-            <Button variant="outlined">Comprar</Button>
-            <p>Stock Actual: {stock}</p>
-        </div>
+        </>
     )
 }
 

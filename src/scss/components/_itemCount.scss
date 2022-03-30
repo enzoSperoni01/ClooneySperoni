@@ -1,25 +1,14 @@
-.Item-Compra {
-    margin: 2rem;
-    padding: 2rem;
-    width: 15%;
-    display: inline-block;
-    border-radius: .5rem;
-    box-shadow: 0 3px 10px -3px #000;
-    border: 2px solid rgb(185, 185, 185);
+.operator {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    .operator {
-        padding: 2rem;
-        display: flex;
-        align-items: center;
-        button {
-            font-size: 1rem;
-            width: .7rem;
-        }
-        p {
-            font-weight: bold;
-            font-size: 2rem;
-        }
+    .btn-count { 
+        margin-top: 0 !important;
+        font-size: 1rem;
+        width: .5rem !important;
+    }
+    p {
+        font-weight: bold;
+        font-size: 2rem;
+        padding: 0 1rem;
     }
 }

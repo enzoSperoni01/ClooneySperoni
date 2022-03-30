@@ -1,16 +1,18 @@
 import './scss/App.scss';
 import NavBar from './components/NavBar/NavBar';
-import ListMovies from './components/ItemListContainer/ListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import HomeSection from './pages/HomeSection';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <ListMovies>
-        <p>Peliculas de Drama</p>
-      </ListMovies>
-      <ItemDetailContainer />
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/Home" element={<HomeSection />}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
