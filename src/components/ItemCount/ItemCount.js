@@ -15,9 +15,9 @@ const ItemCount = ({initial, stock}) => {
     return(
         <>
             <div className='operator'>
-                <Button variant="contained" className='btn-count' onClick={decrement}>-</Button>
+                <Button variant="contained" className='btn-count' onClick={decrement} disabled={count === initial ? true : null}>-</Button>
                 <p>{count}</p>
-                <Button variant="contained" className='btn-count' onClick={increment}>+</Button>
+                <Button variant="contained" className='btn-count' onClick={increment} disabled={count === stock ? true : null}>+</Button>
             </div>
         </>
     )
