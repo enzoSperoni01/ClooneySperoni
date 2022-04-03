@@ -1,7 +1,13 @@
+// Styles
 import './scss/App.scss';
+
+// React
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+// Components & Pages
 import NavBar from './components/NavBar/NavBar';
 import HomeSection from './pages/HomeSection';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ContactSection from './pages/ContactSection';
 
 
 function App() {
@@ -10,7 +16,8 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/Home" element={<HomeSection />}/>
+          <Route path="/" element={<HomeSection />}/>
+          <Route path="/contact" element={<ContactSection />} />
         </Routes>
       </BrowserRouter>
     </div>

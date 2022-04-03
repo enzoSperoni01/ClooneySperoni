@@ -19,7 +19,7 @@ const movieList = [
         img: 'https://www.cinemascomics.com/wp-content/uploads/2012/05/tdkr-jpg.jpg',
         label: 'The Dark Knight',
         price: 75,
-        stock: 11
+        stock: 9
     }
 ];
 

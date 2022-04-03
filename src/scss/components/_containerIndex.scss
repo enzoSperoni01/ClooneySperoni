@@ -5,12 +5,13 @@
     .container-movies {
         margin-top: 5rem;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-evenly;
         text-align: center;
         .movie-card {
             background-color: #fff;
-            width: 18rem;
+            width: 14%;
             height: 100%;
             position: relative;
             top: 0;
@@ -20,18 +21,24 @@
             border: 3px solid hsl(205, 100%, 90%);
             border-radius: .6rem;
             padding: 2.5rem 1.8rem;
+
             transition: all 400ms;
             img {
                 border-radius: .6rem;
             }
-            h2 {
-                font-size: 2.3rem;
+            .movie-info {
+                margin: 1.6rem 0;
+                h2 {
+                    font-size: 2.3rem;
+                }
+                p {
+                    font-weight: bold;
+                    font-size: 1.6rem;
+                }
             }
-            h3 {
-                font-size: 1.9rem;
-            }
-            p {
-                font-size: 1.4rem;
+
+            .count-item {
+                text-align: center;
             }
         }
         .movie-card:hover {
