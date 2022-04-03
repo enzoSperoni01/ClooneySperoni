@@ -34,11 +34,27 @@
                 p {
                     font-weight: bold;
                     font-size: 1.6rem;
+                    span {
+                        color: hsl(205, 70%, 45%);
+                    }
                 }
             }
 
             .count-item {
                 text-align: center;
+            }
+
+            .btn-sect {
+                display: flex;
+                justify-content: space-around;
+                .btn-cart {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 1.5rem;
+                    .btn-icon {
+                        font-size: 2.1rem;
+                    }
+                }
             }
         }
         .movie-card:hover {

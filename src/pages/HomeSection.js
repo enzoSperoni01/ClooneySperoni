@@ -6,7 +6,7 @@ const HomeSection = () => {
     return(
         <>
             <ListMovies>
-                <p>Peliculas de Drama</p>
+                <p>Listado de Peliculas</p>
             </ListMovies>
             <ItemDetailContainer />
         </>

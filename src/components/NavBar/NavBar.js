@@ -1,5 +1,6 @@
 import Button from '@mui/material/Button';
 import CartWidget from '../CartWidget/CartWidget';
+import { Link } from 'react-router-dom';
 import '../../scss/App.scss';
 
 const NavBar = () => {
@@ -9,9 +10,15 @@ const NavBar = () => {
 
             <nav>
                 <ul>
-                    <li><Button>Inicio</Button></li>
-                    <li><Button>Nosotros</Button></li>
-                    <li><Button>Contacto</Button></li>
+                    <li>
+                        <Link to={'/'} className='link-style'><Button>Inicio</Button></Link>
+                    </li>
+                    <li>
+                        <Button>Nosotros</Button>
+                    </li>
+                    <li>
+                        <Link to={'/contact'} className='link-style'><Button>Contacto</Button></Link>
+                    </li>
                 </ul>
             </nav>
 

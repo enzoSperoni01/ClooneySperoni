@@ -5,8 +5,6 @@ import ItemCount from '../ItemCount/ItemCount';
 const ItemDetail = ({ item }) => { 
     const { id, title, price, gender, stock, initial, url, parragraph } = item;
 
-
-
     return(
         <div key={id} className='Card-Detail'>
             <img src={url} alt={`Poster ${title}`}/>

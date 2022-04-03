@@ -8,7 +8,9 @@ const Form = () => {
                 <label> Correo Electronico
                     <input type="text" />
                 </label>
-                <textarea></textarea>
+                <label>Mensaje:
+                    <textarea></textarea>
+                </label>
                 <button>Enviar Formulario</button>
             </form>
         </>
