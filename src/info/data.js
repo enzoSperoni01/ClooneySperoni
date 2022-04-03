@@ -16,7 +16,7 @@ const movieList = [
     },
     {
         id: 3,
-        img: 'https://www.cinemascomics.com/wp-content/uploads/2012/05/tdkr-jpg.jpg',
+        img: 'https://http2.mlstatic.com/D_NQ_NP_2X_762347-MLA31840426768_082019-F.webp',
         label: 'The Dark Knight',
         price: 75,
         stock: 9

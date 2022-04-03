@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
-import CircularProgress from '@mui/material/CircularProgress';
 import '../../scss/App.scss';
 
 const ItemDetailContainer = () => {
@@ -18,17 +17,14 @@ const ItemDetailContainer = () => {
     const [ film, setFilm ] = useState([]);
 
     const getItem = async () => {
-        let promise = new Promise((resolve, reject) => {
-            setTimeout(() => resolve(FilmMocky), 2000);
-        })
+        let promise = new Promise((resolve, reject) => setTimeout( () => resolve(FilmMocky), 2000) )
         let result = await promise;
         return result;
     };
 
     useEffect(() => {
         getItem()
-            .then( data => setFilm(data) )
-            .finally('Fin de la llamada');
+            .then( data => setFilm(data) );
     })
     return(
         <div className="Detail-Container">
