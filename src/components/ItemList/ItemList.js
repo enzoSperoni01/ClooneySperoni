@@ -37,6 +37,7 @@ const ItemList = () => {
                                 return(
                                     <MovieCard
                                         key={id}
+                                        id={id}
                                         img={img}
                                         label={label}
                                         price={price}
