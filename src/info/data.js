@@ -7,6 +7,7 @@ const movieList = [
         gender: "Drama",
         parragraph: "En su segundo año luchando contra el crimen, Batman explora la corrupción existente en la ciudad de Gotham y el vínculo de esta con su propia familia. Además, entrará en conflicto con un asesino en serie conocido como 'El Acertijo'.",
         price: 50,
+        initial: 1,
         stock: 5
     },
     {
@@ -16,6 +17,7 @@ const movieList = [
         gender: "Drama",
         parragraph: "Arthur Fleck adora hacer reír a la gente, pero su carrera como comediante es un fracaso. El repudio social, la marginación y una serie de trágicos acontecimientos lo conducen por el sendero de la locura y, finalmente, cae en el mundo del crimen.",
         price: 40,
+        initial: 1,
         stock: 5
     },
     {

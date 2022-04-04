@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import InfoIcon from '@mui/icons-material/Info';
@@ -18,7 +18,7 @@ const MovieItem = ({ label, price, id, stock, img }) => {
 
             <div className='btn-sect'>
                 <Button className='btn-cart' variant="contained"><AddShoppingCartIcon className='btn-icon' /></Button>
-                <Button className='btn-cart' variant="outlined"><InfoIcon className='btn-icon' /></Button>
+                <Link to={`/peliculas/${id}`}><Button className='btn-cart' variant="outlined"><InfoIcon className='btn-icon' /></Button></Link>
             </div>
         </div>
     )

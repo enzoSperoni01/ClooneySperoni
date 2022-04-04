@@ -6,7 +6,7 @@ import '../../scss/App.scss';
 const NavBar = () => {
     return (
         <div className='navbar'>
-            <h2>Clooney</h2>
+            <Link to={'/'} className='link-style'><h2>Clooney</h2></Link>
 
             <nav>
                 <ul>

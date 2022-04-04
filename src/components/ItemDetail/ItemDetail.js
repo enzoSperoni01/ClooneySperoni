@@ -22,7 +22,6 @@ const ItemDetail = ({ item }) => {
                     <Button variant="contained">Añadir al carrito</Button>
                 </div>
             </div>
-
         </div>
     )
 }

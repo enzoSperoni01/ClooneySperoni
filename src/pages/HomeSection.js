@@ -8,7 +8,7 @@ const HomeSection = () => {
             <ListMovies>
                 <p>Listado de Peliculas</p>
             </ListMovies>
-            <ItemDetailContainer />
+            {/* <ItemDetailContainer /> */}
         </>
     )
 }
