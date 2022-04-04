@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import movieList from '../../info/data';   
 import MovieCard from '../MovieCard/Item.js';
 import CircularProgress from '@mui/material/CircularProgress';
