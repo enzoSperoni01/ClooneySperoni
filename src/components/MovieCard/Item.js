@@ -14,7 +14,7 @@ const MovieItem = ({ label, price, id, stock, img }) => {
                 <p><span>Precio:</span> ${price}</p>
             </div>
 
-            <ItemCount className="count-item" initial={1} stock={stock} />
+            {/* <ItemCount className="count-item" initial={1} stock={stock} /> */}
 
             <div className='btn-sect'>
                 <Button className='btn-cart' variant="contained"><AddShoppingCartIcon className='btn-icon' /></Button>
