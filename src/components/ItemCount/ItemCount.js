@@ -19,24 +19,22 @@ const ItemCount = ({initial, stock, onAdd, addFilm}) => {
                 <Button variant="contained" className='btn-count' onClick={() => addItem(1)} disabled={count === stock ? true : null}>+</Button>
             </div>
             <div>
-                <Link to={'/cart'}>
-                    <Button
-                        variant="contained"
-                        onClick={ () => {
-                                const firstFunc = onAdd(count);
-                                const secFunc = addFilm(count);
+                <Button
+                    variant="contained"
+                    onClick={ () => {
+                            const firstFunc = onAdd(count);
+                            const secFunc = addFilm(count);
 
-                                // Call
-                                firstFunc();
-                                secFunc();
-                            }
+                            // Call
+                            firstFunc();
+                            secFunc();
                         }
-                        disabled={stock === 0 ? true : null} 
-                        endIcon={<AddShoppingCartIcon />}
-                    >
-                        Añadir al
-                    </Button>
-                </Link>
+                    }
+                    disabled={stock === 0 ? true : null} 
+                    endIcon={<AddShoppingCartIcon />}
+                >
+                    Añadir al
+                </Button>
             </div>
         </>
     )

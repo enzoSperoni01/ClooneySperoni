@@ -19,7 +19,7 @@ const ItemDetailContainer = ({id}) => {
                 const finded = data.find(element => element.id == id);
                 setFilm(finded);
             } );
-    }, [])
+    }, []);
 
     return(
         <div className="Detail-Container">

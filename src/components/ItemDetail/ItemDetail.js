@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 
 const ItemDetail = ({ item }) => { 
     const { id, label, price, gender, stock, initial, img, parragraph } = item;
+    const [ click, setClick ] = useState(true);
 
     const [ prodAdd, setProd ] = useState(0);
     const addFilm = (cant) => {
@@ -13,6 +15,12 @@ const ItemDetail = ({ item }) => {
     const onAdd = (num) => {
         let frase = num === 1 ? `Has añadido al carrito la película ${label}!` : `Has añadido ${num} películas de: ${label}!` 
         alert(frase);
+
+        const result = num * price;
+        if(num > 0) {
+            setClick(!click);
+            setProd(result);
+        }
     }
 
     return(
@@ -27,9 +35,15 @@ const ItemDetail = ({ item }) => {
                     <p><span>Sinopsis:</span> {parragraph}</p>
                 </div>
 
-                <div className="actions">
-                    <ItemCount initial={initial} stock={stock} onAdd={onAdd} addFilm={addFilm} />
-                </div>
+                {
+                    click ? (
+                        <div className="actions">
+                            <ItemCount initial={initial} stock={stock} onAdd={onAdd} addFilm={addFilm} />
+                        </div>
+                    ) : (
+                        <Link to={'/cart'}><h2>Carrito</h2></Link>
+                    )
+                }
             </div>
         </div>
     )
