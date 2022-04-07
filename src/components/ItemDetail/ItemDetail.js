@@ -1,9 +1,19 @@
-import React from 'react';
-import Button from '@mui/material/Button';
+import React, { useState } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 
 const ItemDetail = ({ item }) => { 
     const { id, label, price, gender, stock, initial, img, parragraph } = item;
+
+    const [ prodAdd, setProd ] = useState(0);
+    const addFilm = (cant) => {
+        setProd(cant + prodAdd);
+        console.log(cant);
+    }
+
+    const onAdd = (num) => {
+        alert(`Has añadido ${num} películas!`)
+    }
+
 
     return(
         <div key={id} className='Card-Detail'>
@@ -18,8 +28,7 @@ const ItemDetail = ({ item }) => {
                 </div>
 
                 <div className="actions">
-                    <ItemCount initial={initial} stock={stock} />
-                    <Button variant="contained">Añadir al carrito</Button>
+                    <ItemCount initial={initial} stock={stock} onAdd={onAdd} addFilm={addFilm} />
                 </div>
             </div>
         </div>
