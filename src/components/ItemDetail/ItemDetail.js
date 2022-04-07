@@ -11,9 +11,9 @@ const ItemDetail = ({ item }) => {
     }
 
     const onAdd = (num) => {
-        alert(`Has añadido ${num} películas!`)
+        let frase = num === 1 ? `Has añadido al carrito la película ${label}!` : `Has añadido ${num} películas de: ${label}!` 
+        alert(frase);
     }
-
 
     return(
         <div key={id} className='Card-Detail'>
