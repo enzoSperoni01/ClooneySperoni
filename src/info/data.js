@@ -4,7 +4,7 @@ const movieList = [
         id: 1,
         img: 'https://www.quepeliculaver.com/uploads/2021/12/7YncShtIGNJP5euTPSZGxGsImaN.jpg',
         label: 'The Batman',
-        gender: "Drama",
+        gender: "Accion",
         parragraph: "En su segundo año luchando contra el crimen, Batman explora la corrupción existente en la ciudad de Gotham y el vínculo de esta con su propia familia. Además, entrará en conflicto con un asesino en serie conocido como 'El Acertijo'.",
         price: 50,
         initial: 1,
@@ -24,9 +24,19 @@ const movieList = [
         id: 3,
         img: 'https://http2.mlstatic.com/D_NQ_NP_2X_762347-MLA31840426768_082019-F.webp',
         label: 'The Dark Knight',
-        gender: 'Action',
+        gender: 'Accion',
         parragraph: "Con la ayuda del teniente Jim Gordon y del Fiscal del Distrito Harvey Dent, Batman mantiene a raya el crimen organizado en Gotham. Todo cambia cuando aparece el Joker, un nuevo criminal que desencadena el caos y tiene aterrados a los ciudadanos.",
         price: 75,
+        initial: 1,
+        stock: 5
+    },
+    {
+        id: 4,
+        img: 'https://i.blogs.es/0f3ff5/perdida_gone_girl_david_fincher_nuevo_poster/450_1000.jpg',
+        label: 'Gone Girl',
+        gender: 'Drama',
+        parragraph: "En su quinto aniversario de boda, Nick informa que su esposa Amy ha desaparecido misteriosamente. Pronto la presión policial y mediática hace que el retrato de felicidad doméstica que ofrece Nick empiece a tambalearse y se convierte en sospechoso.",
+        price: 55,
         initial: 1,
         stock: 5
     }

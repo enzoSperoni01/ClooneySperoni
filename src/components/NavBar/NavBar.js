@@ -1,16 +1,85 @@
+import { useState } from 'react';
 import Button from '@mui/material/Button';
 import CartWidget from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 import '../../scss/App.scss';
 
 const NavBar = () => {
+    const [anchorEl, setAnchorEl] = useState(null);
+    const open = Boolean(anchorEl);
+    const handleToggleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleToggleClose = () => {
+        setAnchorEl(null);
+    };
+
+    const pages = [
+        {
+            title:'Inicio',
+            url: '/'
+        },
+        {
+            title:'Peliculas',
+            url: '/'
+        }, 
+        {
+            title:'Nosotros',
+            url: '/'
+        },
+        {
+            title: 'Contacto',
+            url: '/contact'
+        }
+    ]
+
     return (
         <div className='navbar'>
             <Link to={'/'} className='link-style'><h2>Clooney</h2></Link>
 
             <nav>
                 <ul>
-                    <li>
+                {pages.map((page) => {
+                    return(
+                        page.title === 'Peliculas' ? (
+                        <li>
+                            <Button 
+                                id="fade-button"
+                                aria-controls={open ? 'fade-menu' : undefined}
+                                aria-haspopup="true"
+                                aria-expanded={open ? 'true' : undefined}
+                                onClick={handleToggleClick}
+                            >{page.title}</Button>
+                            <Menu
+                                id="fade-button"
+                                anchorEl={anchorEl}
+                                open={open}
+                                onClose={handleToggleClose}
+                                MenuListProps={{
+                                'aria-labelledby': 'fade-button',
+                                }}
+                            >
+                                <MenuItem onClick={handleToggleClose}>
+                                    <Link to={'/:gender'}>Acción</Link>
+                                </MenuItem>
+                                <MenuItem onClick={handleToggleClose}>
+                                    <Link to={'/:gender'}>Drama</Link>
+                                </MenuItem>
+                            </Menu> 
+                        </li>
+                        ) : (
+                        <li>
+                            <Button>
+                                <Link to={page.url} className="link-style">{page.title}</Link>
+                            </Button>
+                        </li>
+                        )
+                        
+                    )
+                })}
+                    {/* <li>
                         <Link to={'/'} className='link-style'><Button>Inicio</Button></Link>
                     </li>
                     <li>
@@ -18,7 +87,7 @@ const NavBar = () => {
                     </li>
                     <li>
                         <Link to={'/contact'} className='link-style'><Button>Contacto</Button></Link>
-                    </li>
+                    </li> */}
                 </ul>
             </nav>
 
