@@ -5,7 +5,7 @@
 
 #### Resumen: 
 * La idea del proyecto nace a partir de mi hobbie por ver películas
-* Se elegieron películas de superheroes por gusto propio
+* Se elegieron ciertas películas por gusto propio
 * Aplique distintos manejos de estados
 * Como libreria de estilos, aplique MUI
 
