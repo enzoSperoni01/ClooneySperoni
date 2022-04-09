@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-// import CircularProgress from '@mui/material/CircularProgress';
 import movieList from '../../info/data';
 import ItemDetail from '../ItemDetail/ItemDetail';
-import LinearProgress from '../LinearLoading/Loading'
+import LinearIndeterminate from '../LinearLoading/Loading'
 
 const ItemDetailContainer = ({id}) => {
     const [ film, setFilm ] = useState([]);
@@ -38,8 +37,7 @@ const ItemDetailContainer = ({id}) => {
                         </>
                     ) : (
                         <div className='circular-progress'>
-                            {/* <CircularProgress /> */}
-                            <LinearProgress />
+                            <LinearIndeterminate />
                         </div>
                     )
                 }
