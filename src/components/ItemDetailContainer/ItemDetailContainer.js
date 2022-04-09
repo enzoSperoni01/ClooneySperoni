@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import CircularProgress from '@mui/material/CircularProgress';
+// import CircularProgress from '@mui/material/CircularProgress';
 import movieList from '../../info/data';
 import ItemDetail from '../ItemDetail/ItemDetail';
+import LinearProgress from '../LinearLoading/Loading'
 
 const ItemDetailContainer = ({id}) => {
     const [ film, setFilm ] = useState([]);
@@ -9,7 +10,7 @@ const ItemDetailContainer = ({id}) => {
 
     const getItem = () => {
         let promise = new Promise((resolve, reject) => {
-            setTimeout( () => resolve(movieList), 1000)
+            setTimeout( () => resolve(movieList), 2000)
         })
         let result = promise;
         return result;
@@ -18,7 +19,7 @@ const ItemDetailContainer = ({id}) => {
     useEffect(() => {
         setTimeout(() => {
             setLoading(true);
-        }, 2000)
+        }, 3000)
         getItem()
             .then( data => {
                 const finded = data.find(element => element.id == id);
@@ -37,7 +38,8 @@ const ItemDetailContainer = ({id}) => {
                         </>
                     ) : (
                         <div className='circular-progress'>
-                            <CircularProgress />
+                            {/* <CircularProgress /> */}
+                            <LinearProgress />
                         </div>
                     )
                 }
