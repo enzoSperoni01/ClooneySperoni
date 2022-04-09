@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
+import DisableElevation from '../ButtonGroup/Buttons';
 
 const ItemDetail = ({ item }) => { 
     const { id, label, price, gender, stock, initial, img, parragraph } = item;
@@ -41,7 +41,7 @@ const ItemDetail = ({ item }) => {
                             <ItemCount initial={initial} stock={stock} onAdd={onAdd} addFilm={addFilm} />
                         </div>
                     ) : (
-                        <Link to={'/cart'}><h2>Carrito</h2></Link>
+                        <DisableElevation />
                     )
                 }
             </div>

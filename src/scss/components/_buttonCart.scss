@@ -10,3 +10,18 @@
         }
     }
 }
+
+// Button Group
+.btn-group {
+    margin-top: 2.5rem;
+    a {
+        text-decoration: none;
+        button {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+    }
+    a:nth-child(2) {
+        margin-left: 2rem;
+    }
+}
