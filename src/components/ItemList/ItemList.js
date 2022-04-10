@@ -33,10 +33,11 @@ const ItemList = () => {
                     <>
                         {
                             films.map( film => {
-                                const { label, img, price, stock, id } = film;
+                                const { label, img, price, stock, id, link } = film;
                                 return(
                                     <MovieCard
                                         key={id}
+                                        link={link}
                                         id={id}
                                         img={img}
                                         label={label}
