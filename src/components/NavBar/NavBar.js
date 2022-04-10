@@ -61,11 +61,11 @@ const NavBar = () => {
                                 'aria-labelledby': 'fade-button',
                                 }}
                             >
-                                <MenuItem onClick={handleToggleClose}>
-                                    <Link to={'/:gender'}>Acción</Link>
+                                <MenuItem onClick={handleToggleClose} className='menu-item'>
+                                    <Link to={'/:gender'} className="menu-link">Acción</Link>
                                 </MenuItem>
-                                <MenuItem onClick={handleToggleClose}>
-                                    <Link to={'/:gender'}>Drama</Link>
+                                <MenuItem onClick={handleToggleClose} className='menu-item'>
+                                    <Link to={'/:gender'} className="menu-link">Drama</Link>
                                 </MenuItem>
                             </Menu> 
                         </li>
