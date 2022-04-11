@@ -3,7 +3,6 @@
         text-decoration: none;
         color: #1976d2;
     }
-    opacity: .5;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -20,9 +19,11 @@
         font-size: 3rem;
     }
     ul {
+        opacity: .4;
         display: flex;
         align-items: center;
         list-style: none;
+        transition: all .3s ease-out;
         li {
             margin: 0 10px;
             .link-style {
@@ -33,11 +34,21 @@
             }
         }
     }
+
+    .btn-cart {
+        opacity: .4;
+        transition: all .3s ease-out;
+    }
 }
 .navbar:hover {
-    opacity: 1;
     background-color: #fff;
     box-shadow: 0px -9px 15px 0px rgba(0, 0, 0, 1);
+    ul {
+        opacity: 1;
+    }
+    .btn-cart {
+        opacity: 1;
+    }
 }
 
 .navbar > a,

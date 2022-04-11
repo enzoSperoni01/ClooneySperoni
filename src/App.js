@@ -4,9 +4,10 @@ import './scss/App.scss';
 // React
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-// Components & Pages
+// Components
 import NavBar from './components/NavBar/NavBar';
 
+// Pages
 import HomeSection from './pages/HomeSection';
 import DetailItemPage from './pages/Detail';
 import ContactSection from './pages/ContactSection';

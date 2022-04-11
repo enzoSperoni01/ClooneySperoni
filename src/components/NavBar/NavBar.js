@@ -82,7 +82,7 @@ const NavBar = () => {
             </nav>
 
             <Link to={'/cart'}>
-                <CartWidget />
+                <CartWidget clasName='btn-cart' />
             </Link>
         </div>
     );
