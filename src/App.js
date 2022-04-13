@@ -14,12 +14,12 @@ import ContactSection from './pages/ContactSection';
 import CartSection from './pages/CartPage';
 
 // Context
-import { CartProvider } from './components/Context/CartContext.js';
+import { CartContextProvider } from './Context/CartContext';
 
 function App() {
   return (
     <div className="App">
-      <CartProvider>
+      <CartContextProvider>
         <BrowserRouter>
           <NavBar />
           <Routes>
@@ -29,7 +29,7 @@ function App() {
             <Route path={"/cart"} element={<CartSection />}/>
           </Routes>
         </BrowserRouter>
-      </CartProvider>
+      </CartContextProvider>
     </div>
   );
 }

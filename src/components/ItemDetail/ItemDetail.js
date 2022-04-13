@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import { useCartContext } from '../../Context/CartContext';
 import ItemCount from '../ItemCount/ItemCount';
 import DisableElevation from '../ButtonGroup/Buttons';
 
 const ItemDetail = ({ item }) => { 
     const { id, label, price, gender, stock, initial, img, parragraph } = item;
     const [ click, setClick ] = useState(true);
+
+    const { agregarAlCarrito } = useCartContext();
+    const [ contador, setContador ] = useState(0)
 
     const [ prodAdd, setProd ] = useState(0);
     const addFilm = (cant) => {
@@ -21,6 +25,8 @@ const ItemDetail = ({ item }) => {
             setClick(!click);
             setProd(result);
         }
+        setContador(num)
+        agregarAlCarrito( {...item, quantity: num} )
     }
 
     return(

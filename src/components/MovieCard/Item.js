@@ -1,22 +1,9 @@
-import React, { useState, useEffect, useContext } from 'react';
-import CartContext from '../Context/CartContext';
-
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+// import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import InfoIcon from '@mui/icons-material/Info';
 
 const MovieItem = ({ label, price, id, img, link }) => {
-    const { cartFilms, addFilmToCart } = useContext(CartContext);
-
-    useEffect(() => {
-        console.log('Cart Films: ' + cartFilms);
-    }, [])
-
-    const addToCart = e => {
-        e.stopPropagation();
-        addFilmToCart();
-    }
 
     return(
         <div key={id} className='movie-card'>
@@ -28,7 +15,7 @@ const MovieItem = ({ label, price, id, img, link }) => {
             </div>
 
             <div className='btn-sect'>
-                <Button className='btn-cart' onClick={addToCart} variant="contained"><AddShoppingCartIcon className='btn-icon' /></Button>
+                {/* <Button className='btn-cart' variant="contained"><AddShoppingCartIcon className='btn-icon' /></Button> */}
                 <Link to={`/peliculas/${link}`}>
                     <Button className='btn-cart' variant="outlined"><InfoIcon className='btn-icon' /></Button>
                 </Link>
