@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useCartContext } from "../Context/CartContext";
 import Button from '@mui/material/Button';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import ModalDelete from '../components/Modal/ModalDelete';
 
 const CartWidget = () =>{
     const { cartList, deleteOne, emptyCart, sumaTotal } = useCartContext();
@@ -51,7 +52,7 @@ const CartWidget = () =>{
                     <h2> TOTAL: ${sumaTotal()} </h2>
                     <div className="total-buttons">
                         <Button variant="contained" color="success" onClick={emptyCart}>Comprar</Button>
-                        <Button variant="outlined" color="error" onClick={emptyCart}>Vaciar carrito</Button>
+                        <ModalDelete />
                     </div>
                 </div>
                 }   
