@@ -28,9 +28,8 @@ export const CartContextProvider = ({ children }) => {
     }
 
     const isInCart = (id) =>{
-        return cartList.some( prod => prod.id === id)
+        return cartList.some( prod => prod.id === id);
     }
-
 
     const deleteOne = (id) => {
         setCartList(cartList.filter(p => p.id !== id));

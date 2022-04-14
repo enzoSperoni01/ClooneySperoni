@@ -1,48 +1,49 @@
-import { Link } from "react-router-dom"
-import { useCartContext } from "../Context/CartContext"
+import { Link } from "react-router-dom";
+import { useCartContext } from "../Context/CartContext";
+import Button from '@mui/material/Button';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 
 const CartWidget = () =>{
     const { cartList, deleteOne, emptyCart, sumaTotal } = useCartContext();
 
     return(
-        <div>
-            <h1>Carrito:</h1>
+        <div className="cart-section">
+            <h1>Tu carrito:</h1>
         {
             (cartList.length === 0)
             &&
-            <div>
-                <p>No hay items en tu carrito...</p>
+            <div className="no-items">
+                <p>No hay peliculas en tu carrito...</p>
                 <Link to='/'>
-                    <button>Continuar comprando</button>
+                    <Button variant="outlined" className="button">Continuar comprando</Button>
                 </Link>
             </div>
-            
         }    
         {                    
             cartList.map( prod => (
-                <div key={ prod.id } className="row">
-                    <div className="col-md-4">
+                <div key={ prod.id } className="cart-item">
+                    <div className="cart-detail">
                         <img src={prod.img} alt={`Poster ${prod.label}`}/>
                         <h2> {prod.label}</h2>
                         <p> Precio: $ {prod.price}</p>
-                        <p> Cantidad: { prod.cantidad}  </p>
+                        <p> Cantidad: { prod.quantity}  </p>
                     </div>
-                    <div className="col-md-4">
-                    
-                        <button className="btn-sm btn-danger"
-                                onClick={() => deleteOne(prod.id)}
+                    <div className="buttons">
+                        <Button 
+                            variant="contained" 
+                            onClick={() => deleteOne(prod.id)} 
+                            color="error"
                         >
-                            Eliminar
-                        </button>
-                    
+                            <DeleteForeverIcon />
+                        </Button>
                     </div>
                 </div>
             ))
         }
         {
             (cartList.length >= 1) &&
-            <div>
-                <h4> Total de la compra: {sumaTotal()} </h4>
+            <div className="cart-total">
+                <h4> Total de la compra: $ {sumaTotal()} </h4>
                 <button className="btn btn-danger" onClick={emptyCart}>Vaciar carrito</button>
             </div>
         }     
@@ -50,4 +51,4 @@ const CartWidget = () =>{
     ) 
 }
 
-export default CartWidget
+export default CartWidget;
