@@ -23,7 +23,7 @@ export const CartContextProvider = ({ children }) => {
         }
     }
 
-    function emptyCart(){
+    const emptyCart = () => {
         setCartList([]);
     }
 
