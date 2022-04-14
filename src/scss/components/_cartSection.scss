@@ -16,4 +16,39 @@
             font-size: 1.3rem;
         }
     }
+    .film-cart {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .border {
+            border-bottom: 1px solid hsl(0, 0%, 80%);
+        }
+        .film-container {
+            .cart-item {
+                display: flex;
+                flex-direction: column;
+                .cart-detail {
+                    margin: 2rem 35rem 2rem 5rem;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    img {
+                        border-radius: .6rem;
+                        width: 13rem;
+                    }
+                    .info {
+                        text-align: center;
+                        h2 {
+                            font-size: 2.8rem;
+                        }
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+        .cart-total {
+            margin: 3rem;
+        }
+    }
 }

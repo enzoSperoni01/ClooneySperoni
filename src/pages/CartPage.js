@@ -18,35 +18,41 @@ const CartWidget = () =>{
                     <Button variant="outlined" className="button">Continuar comprando</Button>
                 </Link>
             </div>
-        }    
-        {                    
-            cartList.map( prod => (
-                <div key={ prod.id } className="cart-item">
-                    <div className="cart-detail">
-                        <img src={prod.img} alt={`Poster ${prod.label}`}/>
-                        <h2> {prod.label}</h2>
-                        <p> Precio: $ {prod.price}</p>
-                        <p> Cantidad: { prod.quantity}  </p>
-                    </div>
-                    <div className="buttons">
-                        <Button 
-                            variant="contained" 
-                            onClick={() => deleteOne(prod.id)} 
-                            color="error"
-                        >
-                            <DeleteForeverIcon />
-                        </Button>
-                    </div>
-                </div>
-            ))
         }
-        {
-            (cartList.length >= 1) &&
-            <div className="cart-total">
-                <h4> Total de la compra: $ {sumaTotal()} </h4>
-                <button className="btn btn-danger" onClick={emptyCart}>Vaciar carrito</button>
-            </div>
-        }     
+            <div className="film-cart"> 
+                <div className="film-container">
+                    {                    
+                        cartList.map( prod => (
+                            <div key={ prod.id } className='cart-item'>
+                                <div className="cart-detail">
+                                    <img src={prod.img} alt={`Poster ${prod.label}`}/>
+                                    <div className="info">
+                                        <h2> {prod.label}</h2>
+                                        <p> Precio: $ {prod.price}</p>
+                                        <p> Cantidad: { prod.quantity}  </p>
+                                    </div>
+                                    <div className="buttons">
+                                        <Button 
+                                            variant="contained" 
+                                            onClick={() => deleteOne(prod.id)} 
+                                            color="error"
+                                        >
+                                            <DeleteForeverIcon />
+                                        </Button>
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+                {
+                (cartList.length >= 1) &&
+                <div className="cart-total">
+                    <h4> Total de la compra: $ {sumaTotal()} </h4>
+                    <button onClick={emptyCart}>Vaciar carrito</button>
+                </div>
+                }   
+            </div>   
         </div>
     ) 
 }
