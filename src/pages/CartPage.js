@@ -13,7 +13,7 @@ const CartWidget = () =>{
             (cartList.length === 0)
             &&
             <div className="no-items">
-                <p>No hay peliculas en tu carrito...</p>
+                <p>No hay <span>peliculas</span> en tu carrito...</p>
                 <Link to='/'>
                     <Button variant="outlined" className="button">Continuar comprando</Button>
                 </Link>
@@ -48,8 +48,8 @@ const CartWidget = () =>{
                 {
                 (cartList.length >= 1) &&
                 <div className="cart-total">
-                    <h4> Total de la compra: $ {sumaTotal()} </h4>
-                    <button onClick={emptyCart}>Vaciar carrito</button>
+                    <h2> Total de la compra: ${sumaTotal()} </h2>
+                    <Button variant="outlined" color="error" onClick={emptyCart}>Vaciar carrito</Button>
                 </div>
                 }   
             </div>   
