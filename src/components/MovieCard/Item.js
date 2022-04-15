@@ -11,7 +11,7 @@ const MovieItem = ({ item }) => {
 
     const addToCart = (e) => {
         e.stopPropagation();
-        agregarAlCarrito(item);
+        agregarAlCarrito( {...item, quantity: 1} );
     }
 
     return(
