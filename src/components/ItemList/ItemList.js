@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import movieList from '../../info/data';   
 import MovieCard from '../MovieCard/Item.js';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -33,18 +32,7 @@ const ItemList = () => {
                     <>
                         {
                             films.map( film => {
-                                const { label, img, price, stock, id, link } = film;
-                                return(
-                                    <MovieCard
-                                        key={id}
-                                        link={link}
-                                        id={id}
-                                        img={img}
-                                        label={label}
-                                        price={price}
-                                        stock={stock}
-                                    />
-                                )
+                                return <MovieCard item={film} />
                             })
                         }
                     </>

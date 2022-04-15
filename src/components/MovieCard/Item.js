@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import InfoIcon from '@mui/icons-material/Info';
 
-const MovieItem = ({ label, price, id, img, link }) => {
+const MovieItem = ({ item }) => {
+    const { id, img, label, price, link } = item;
 
     return(
         <div key={id} className='movie-card'>

@@ -13,8 +13,8 @@ export const CartContextProvider = ({ children }) => {
         const { quantity } = prod;
 
         prod.quantity = item.quantity + quantity;
-            const newCart = [ ...cartList ];
-            setCartList(newCart);
+        const newCart = [ ...cartList ];
+        setCartList(newCart);
 
         } else {
             setCartList([ ...cartList, item])
