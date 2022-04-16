@@ -11,19 +11,10 @@ const ItemList = () => {
             resolve(movieList);
         }, 3500);
     });
-    
+
     useEffect(() => {
-        getMovies();
+        getFilms.then().then( movies => setFilms(movies));
     }, []);
-    
-    const getMovies = async () => {
-        try {
-            const resultMovies = await getFilms;
-            setFilms(resultMovies);
-        } catch (error) {
-            console.error(error);
-        }
-    }
 
     return(
         <div className="container-movies">
