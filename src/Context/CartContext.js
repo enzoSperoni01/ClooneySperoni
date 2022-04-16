@@ -7,15 +7,14 @@ export const useCartContext = () => useContext(CartContext);
 export const CartContextProvider = ({ children }) => {
     const [cartList, setCartList] = useState([]);
 
-    const agregarAlCarrito = item => {
+    const agregarAlCarrito = (item, message) => {
         if ( isInCart(item.id) ) {
-        const prod = cartList.find((p) => p.id === item.id);
-        const { quantity } = prod;
+            const prod = cartList.find((p) => p.id === item.id);
+            const { quantity } = prod;
 
-        prod.quantity = item.quantity + quantity;
-        const newCart = [ ...cartList ];
-        setCartList(newCart);
-
+            prod.quantity = item.quantity + quantity;
+            const newCart = [ ...cartList ];
+            setCartList(newCart);
         } else {
             setCartList([ ...cartList, item])
         }

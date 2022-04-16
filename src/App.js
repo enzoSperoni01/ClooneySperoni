@@ -3,6 +3,8 @@ import './scss/App.scss';
 
 // React
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Components
 import NavBar from './components/NavBar/NavBar';
@@ -29,6 +31,17 @@ function App() {
             <Route path={"/cart"} element={<CartSection />}/>
           </Routes>
         </BrowserRouter>
+        <ToastContainer
+          position="bottom-right"
+          autoClose={2500}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable={false}
+          pauseOnHover={false}
+        ></ToastContainer>
       </CartContextProvider>
     </div>
   );

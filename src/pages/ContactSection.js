@@ -2,10 +2,10 @@ import Form from '../components/Form/FormComponent';
 
 const ContactSection = () => {
     return(
-        <>
-            <h1>Clooney | Contacto</h1>
+        <div className="contact-section">
+            <h1 className="h1-contact">Clooney | Contacto</h1>
             <Form />
-        </>
+        </div>
     )
 }
 

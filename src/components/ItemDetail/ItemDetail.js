@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useCartContext } from '../../Context/CartContext';
 import ItemCount from '../ItemCount/ItemCount';
 import DisableElevation from '../ButtonGroup/Buttons';
@@ -18,7 +20,16 @@ const ItemDetail = ({ item }) => {
 
     const onAdd = (num) => {
         let frase = num === 1 ? `Has añadido al carrito la película ${label}!` : `Has añadido ${num} películas de: ${label}!` 
-        alert(frase);
+        toast.success(frase, {
+            theme: "colored",
+            position: "bottom-center",
+            autoClose: 2300,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: false,
+            draggable: false,
+            progress: undefined,
+        });
 
         const result = num * price;
         if(num > 0) {

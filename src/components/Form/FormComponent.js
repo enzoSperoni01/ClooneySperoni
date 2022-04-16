@@ -1,7 +1,7 @@
 const Form = () => {
     return(
         <>
-            <form>
+            <form className="form-contact">
                 <label> Nombre y Apellido
                     <input type="text" />
                 </label>
