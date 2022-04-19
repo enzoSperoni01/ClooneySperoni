@@ -3,7 +3,7 @@ import movieList from '../../info/data';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import LinearIndeterminate from '../LinearLoading/Loading'
 
-const ItemDetailContainer = ({link}) => {
+const ItemDetailContainer = ({ id }) => {
     const [ film, setFilm ] = useState([]);
     const [ loading, setLoading ] = useState(false);
 
@@ -21,7 +21,7 @@ const ItemDetailContainer = ({link}) => {
         }, 3000)
         getItem()
             .then( data => {
-                const finded = data.find(element => element.link == link);
+                const finded = data.find(element => element.id == id);
                 setFilm(finded);
             } );
     }, []);

@@ -37,7 +37,7 @@ const MovieItem = ({ item }) => {
 
                 <div className='btn-sect'>
                     <Button className='btn-cart' onClick={addToCart} variant="contained"><AddShoppingCartIcon className='btn-icon' /></Button>
-                    <Link to={`/peliculas/${link}`}>
+                    <Link to={`/peliculas/${id}`}>
                         <Button className='btn-cart' variant="outlined"><InfoIcon className='btn-icon' /></Button>
                     </Link>
                 </div>
