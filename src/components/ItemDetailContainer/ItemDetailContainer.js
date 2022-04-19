@@ -22,15 +22,12 @@ const ItemDetailContainer = ({ id }) => {
     }
 
     useEffect(() => {
-<<<<<<< HEAD
-=======
         getMovies().then( () => { 
             setTimeout(() => {
                 setLoading(false);
             }, 2000);
         });
     }, [id]);
->>>>>>> firebase
 
     return(
         <>
