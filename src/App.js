@@ -26,7 +26,7 @@ function App() {
           <NavBar />
           <Routes>
             <Route path={"/"} element={<HomeSection />}/>
-            <Route path={"/peliculas/:link"} element={<DetailItemPage />} />
+            <Route path={"/peliculas/:id"} element={<DetailItemPage />} />
             <Route path={"/contact"} element={<ContactSection />} />
             <Route path={"/cart"} element={<CartSection />}/>
           </Routes>
