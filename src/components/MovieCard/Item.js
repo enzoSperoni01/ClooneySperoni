@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import InfoIcon from '@mui/icons-material/Info';
 
 const MovieItem = ({ item }) => {
-    const { id, img, label, price, link } = item;
+    const { id, img, label, price } = item;
     const { agregarAlCarrito } = useCartContext();
 
     const addToCart = (e) => {

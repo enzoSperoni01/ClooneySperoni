@@ -7,12 +7,12 @@ import DisableElevation from '../ButtonGroup/Buttons';
 
 const ItemDetail = ({ item }) => { 
     const { id, label, price, gender, stock, initial, img, parragraph } = item;
-    const [ click, setClick ] = useState(true);
-
     const { agregarAlCarrito } = useCartContext();
-    const [ contador, setContador ] = useState(0)
 
+    const [ click, setClick ] = useState(true);
+    const [ contador, setContador ] = useState(0)
     const [ prodAdd, setProd ] = useState(0);
+
     const addFilm = (cant) => {
         setProd(cant + prodAdd);
         console.log(cant);

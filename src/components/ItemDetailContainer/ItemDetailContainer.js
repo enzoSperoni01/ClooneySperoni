@@ -1,44 +1,50 @@
 import React, { useState, useEffect } from 'react';
-import movieList from '../../info/data';
 import ItemDetail from '../ItemDetail/ItemDetail';
-import LinearIndeterminate from '../LinearLoading/Loading'
+import LinearIndeterminate from '../LinearLoading/Loading';
+import { doc, getDoc } from "firebase/firestore";
+import dataBase from "../../firebase";
 
 const ItemDetailContainer = ({ id }) => {
     const [ film, setFilm ] = useState([]);
-    const [ loading, setLoading ] = useState(false);
+    const [ loading, setLoading ] = useState(true);
 
-    const getItem = () => {
-        let promise = new Promise((resolve, reject) => {
-            setTimeout( () => resolve(movieList), 2000)
-        })
-        let result = promise;
-        return result;
-    };
+    const getMovies = async () => {
+        const docRef = doc(dataBase, "peliculas", id);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+            let product = docSnap.data();
+            product.id = docSnap.id;
+            setFilm(product);
+        } else {
+            console.log("No such document!");
+        }
+    }
 
     useEffect(() => {
-        setTimeout(() => {
-            setLoading(true);
-        }, 3000)
-        getItem()
-            .then( data => {
-                const finded = data.find(element => element.id == id);
-                setFilm(finded);
-            } );
-    }, []);
+<<<<<<< HEAD
+=======
+        getMovies().then( () => { 
+            setTimeout(() => {
+                setLoading(false);
+            }, 2000);
+        });
+    }, [id]);
+>>>>>>> firebase
 
     return(
         <>
             <div className="Detail-Container">
                 {
                     loading ? (
+                        <div className='circular-progress'>
+                            <LinearIndeterminate />
+                        </div>
+                    ) : (
                         <>
                             <h2>Detalle de la Pelicula:</h2>
                             <ItemDetail item={film}/>
                         </>
-                    ) : (
-                        <div className='circular-progress'>
-                            <LinearIndeterminate />
-                        </div>
                     )
                 }
             </div>

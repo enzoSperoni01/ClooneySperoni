@@ -1,29 +1,32 @@
 import React, { useEffect, useState } from 'react';
-import movieList from '../../info/data';   
 import MovieCard from '../MovieCard/Item.js';
 import CircularProgress from '@mui/material/CircularProgress';
+
+// Firebase
+import dataBase from '../../firebase';
+import { collection, getDocs } from 'firebase/firestore'; 
 
 const ItemList = () => {
     const [ films, setFilms ] = useState([]);
 
-    const getFilms = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(movieList);
-        }, 3500);
-    });
-    
+    // Firestore
+    const getFilms = async () => { 
+        const filmsCollection = collection(dataBase, 'peliculas');
+        const filmsSnapshot = await getDocs(filmsCollection);
+        const filmList = filmsSnapshot.docs.map((doc) => {
+                let movie = doc.data();
+                movie.id = doc.id;
+
+                return movie;
+            }
+        );
+
+        return filmList;
+    };
+
     useEffect(() => {
-        getMovies();
+        getFilms().then( movies => setFilms(movies));
     }, []);
-    
-    const getMovies = async () => {
-        try {
-            const resultMovies = await getFilms;
-            setFilms(resultMovies);
-        } catch (error) {
-            console.error(error);
-        }
-    }
 
     return(
         <div className="container-movies">
