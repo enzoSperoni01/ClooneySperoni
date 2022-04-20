@@ -62,10 +62,13 @@ const NavBar = () => {
                                 }}
                             >
                                 <MenuItem onClick={handleToggleClose} className='menu-item'>
-                                    <Link to={'/:gender'} className="menu-link">Acción</Link>
+                                    <Link to={'/'} className="menu-link">Todas</Link>
                                 </MenuItem>
                                 <MenuItem onClick={handleToggleClose} className='menu-item'>
-                                    <Link to={'/:gender'} className="menu-link">Drama</Link>
+                                    <Link to={'/Accion'} className="menu-link">Acción</Link>
+                                </MenuItem>
+                                <MenuItem onClick={handleToggleClose} className='menu-item'>
+                                    <Link to={'/Drama'} className="menu-link">Drama</Link>
                                 </MenuItem>
                             </Menu> 
                         </li>

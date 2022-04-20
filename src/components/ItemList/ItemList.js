@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import MovieCard from '../MovieCard/Item.js';
 import CircularProgress from '@mui/material/CircularProgress';
 
@@ -8,6 +9,8 @@ import { collection, getDocs } from 'firebase/firestore';
 
 const ItemList = () => {
     const [ films, setFilms ] = useState([]);
+
+    const { gender } = useParams();
 
     // Firestore
     const getFilms = async () => { 
@@ -25,8 +28,19 @@ const ItemList = () => {
     };
 
     useEffect(() => {
-        getFilms().then( movies => setFilms(movies));
-    }, []);
+        setFilms([]);
+        getFilms().then( film => {
+            gender ? filterByGender(film, gender) : setFilms(film);
+        })
+    }, [gender]);
+
+    const filterByGender = (array , gender) => {
+        return array.map( (product, i) => {
+            if(product.gender === gender) {
+                return setFilms(products => [...products, product]);
+            }
+        })
+    }
 
     return(
         <div className="container-movies">
