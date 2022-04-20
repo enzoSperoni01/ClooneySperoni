@@ -29,9 +29,7 @@ const ItemList = () => {
 
     useEffect(() => {
         setFilms([]);
-        getFilms().then( film => {
-            gender ? filterByGender(film, gender) : setFilms(film);
-        })
+        getFilms().then( film => gender ? filterByGender(film, gender) : setFilms(film));
     }, [gender]);
 
     const filterByGender = (array , gender) => {
