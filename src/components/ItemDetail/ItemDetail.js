@@ -58,7 +58,9 @@ const ItemDetail = ({ item }) => {
                             <ItemCount initial={initial} stock={stock} onAdd={onAdd} addFilm={addFilm} />
                         </div>
                     ) : (
-                        <DisableElevation />
+                        <>
+                            <DisableElevation />
+                        </>
                     )
                 }
             </div>

@@ -10,7 +10,7 @@ const CartWidget = () => {
         <Button className='btn-cart'>
             <ShoppingCartRoundedIcon className='cart-icon' />
             <p>
-                { cartList.length > 0 && quantity()}
+                { cartList.length > 0 ? quantity() : 0}
             </p>
         </Button>
     )
