@@ -1,3 +1,4 @@
+import React from 'react';
 import { useCartContext } from '../../Context/CartContext';
 import Button from '@mui/material/Button';
 import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import Button from '@mui/material/Button';
 import CartWidget from '../CartWidget/CartWidget';
@@ -19,7 +20,7 @@ const NavBar = () => {
     const pages = [
         {
             title:'Inicio',
-            url: '/'
+            url: '/home'
         },
         {
             title:'Peliculas',
@@ -37,7 +38,7 @@ const NavBar = () => {
 
     return (
         <div className='navbar'>
-            <Link to={'/'} className='link-style'><h2>Clooney</h2></Link>
+            <Link to={'/home'} className='link-style'><h2>Clooney</h2></Link>
 
             <nav>
                 <ul>
@@ -62,7 +63,7 @@ const NavBar = () => {
                                 }}
                             >
                                 <MenuItem onClick={handleToggleClose} className='menu-item'>
-                                    <Link to={'/'} className="menu-link">Todas</Link>
+                                    <Link to={'/peliculas'} className="menu-link">Todas</Link>
                                 </MenuItem>
                                 <MenuItem onClick={handleToggleClose} className='menu-item'>
                                     <Link to={'/Accion'} className="menu-link">Acción</Link>

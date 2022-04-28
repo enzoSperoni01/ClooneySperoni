@@ -1,7 +1,7 @@
 import React from 'react';
 import ListMovies from '../components/ItemListContainer/ListContainer';
 
-const HomeSection = () => {
+const ProductsSection = () => {
     return(
         <>
             <ListMovies>
@@ -11,4 +11,4 @@ const HomeSection = () => {
     )
 }
 
-export default HomeSection;
+export default ProductsSection;
