@@ -6,9 +6,9 @@ const AboutUsSection = () => {
     return(
         <>
             <Container className="about-section" maxWidth="lg">
-                <h1>Sobre Nosotros</h1>
+                <h1 data-aos="fade-right" data-aos-duration="500">Sobre Nosotros</h1>
 
-                <div className="container">
+                <div data-aos="fade-right" data-aos-duration="800" className="container">
                     <div className="div-section">
                         <p>Nos apasiona el cine tanto como a vos<br/> Es por eso que creamos <span>Clooney</span></p>
                     </div>
@@ -18,7 +18,7 @@ const AboutUsSection = () => {
                     </div>
                 </div>
 
-                <p>Si deseas contactarte con nosotros, no dudes en ir a la seccion de <Link to={'/contact'}>Contacto</Link></p>
+                <p data-aos="fade-right" data-aos-duration="1000">Si deseas contactarte con nosotros, no dudes en ir a la seccion de <Link to={'/contact'}>Contacto</Link></p>
             </Container>
         </>
     )
