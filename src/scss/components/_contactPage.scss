@@ -1,0 +1,51 @@
+.contact-section {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .h1-contact {
+        font-weight: bold;
+        letter-spacing: 3px;
+        text-align: center;
+        font-size: 3.5rem;
+        color: hsl(205, 70%, 40%);
+    }
+
+    .form-contact {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        .form-div {
+            margin: 1.1rem 0;
+        }
+        input {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+        p {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        textarea {
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+        .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root {
+            font-size: 1.6rem;
+        }
+        .css-7nxzgd {
+            font-size: 1.2rem;
+        }
+
+        button {
+            margin-top: 1.3rem;
+            font-weight: bold;
+            font-size: 1.6rem;
+        }
+    }
+}
