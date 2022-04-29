@@ -15,6 +15,7 @@ import NavBar from './components/NavBar/NavBar';
 // Pages
 import HomeSection from './pages/HomePage';
 import ProductsSection from './pages/ProductsSection';
+import AboutUsSection from './pages/aboutUsPage';
 import DetailItemPage from './pages/Detail';
 import ContactSection from './pages/ContactSection';
 import CartSection from './pages/CartPage';
@@ -32,6 +33,7 @@ function App() {
           <Routes>
             <Route path={"/home"} element={<HomeSection />}/>
             <Route path={"/peliculas"} element={<ProductsSection />}/>
+            <Route path={"/nosotros"} element={<AboutUsSection />}/>
             <Route path="/:gender/" element={<ProductsSection />}/>
             <Route path={"/peliculas/:id"} element={<DetailItemPage />} />
             <Route path={"/contact"} element={<ContactSection />} />

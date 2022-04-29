@@ -19,18 +19,22 @@ const NavBar = () => {
 
     const pages = [
         {
+            id: 1,
             title:'Inicio',
             url: '/home'
         },
         {
+            id: 2,
             title:'Peliculas',
             url: '/'
         }, 
         {
+            id: 3,
             title:'Nosotros',
-            url: '/'
+            url: '/nosotros'
         },
         {
+            id: 4,
             title: 'Contacto',
             url: '/contact'
         }
@@ -42,10 +46,10 @@ const NavBar = () => {
 
             <nav>
                 <ul>
-                {pages.map((page) => {
+                {pages.map( page => {
                     return(
                         page.title === 'Peliculas' ? (
-                        <li>
+                        <li key={page.id}>
                             <Button 
                                 id="fade-button"
                                 aria-controls={open ? 'fade-menu' : undefined}
@@ -74,7 +78,7 @@ const NavBar = () => {
                             </Menu> 
                         </li>
                         ) : (
-                        <li>
+                        <li key={page.id}>
                             <Button>
                                 <Link to={page.url} className="link-style">{page.title}</Link>
                             </Button>
